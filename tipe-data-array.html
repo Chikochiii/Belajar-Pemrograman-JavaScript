@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Tipe Data Array</title>
+</head>
+<body>
+ <script type="text/javascript" charset="utf-8">
+  let arrayKosong = [];
+  
+  let arrayNama = ["Annur","Musthofa","Chikochi", 1, true];
+  
+  // Menambah Data
+  const names = [];
+  names.push("Cihuyy");
+  names.push("Bello", "Uhuyy");
+  names.push("Hayyuk", "Wkwk");
+  
+  console.table(names);
+  
+  console.info(names[0]);
+  console.info(names[1]);
+  console.info(names[2]);
+  
+  names[0] = "Awoakawoak";
+  names[2] = "bruh";
+  names[4] = "wtf";
+  
+  console.table(names);
+  
+  delete names[3];
+  
+  console.table(names);
+  
+  names.push("uhuyyyyyy");
+  names.push(1,2,3,4,5);
+  names.push(["arrayName"]);
+  
+  console.table(names);
+  
+ </script>
+</body>
+</html>

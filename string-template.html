@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>String Template</title>
+</head>
+<body>
+ <script type="text/javascript" charset="utf-8">
+  
+  // mengambil variabel
+  const name = "Annur Musthofa";
+  const template = `Name : ${name}`;
+  
+  console.info(template);
+  
+  // Expression di string template
+  const nilai = 90;
+  const template2 =`Name : ${name}, lulus : ${nilai > 75}`;
+  
+  console.info(template2);
+  
+  // Multiline String
+  const multiline = `Nama saya Chiko,
+  Sekarang saya nganggur,
+  sering juga main gitar,
+  kalau malas ya turu`;
+  
+ 
+  
+  document.writeln("<pre>");
+  document.writeln(multiline);
+  document.writeln("</pre>");
+  
+ </script>
+</body>
+</html>
