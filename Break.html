@@ -4,24 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>For loop</title>
+  <title>Break</title>
 </head>
 <body>
   <script type="text/javascript" charset="utf-8">
-    //perulangan tanpa henti
-    //for(;;) {
-     // alert("jawa");}
-     
-     //perulangan dengan kondisi
-     /*let counter = 1;
-     for(;counter <= 10;){
+    
+    let counter = 1;
+    while(true){
        document.writeln(`<p>Perulangan ke-${counter}</p>`);
-       counter ++;
-     }*/
-     
-     for(let counter = 1; counter <= 40; counter++){
-       document.writeln(`<p>Jawa${counter}</p>`);
-     }
+       counter++;
+       if(counter > 10){
+         break;
+       }
+    }
+    
   </script>
 </body>
 </html>
