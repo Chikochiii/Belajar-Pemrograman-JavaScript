@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Function Return value</title>
+</head>
+<body>
+  <script type="text/javascript" charset="utf-8">
+  
+  function sayBello(firstName, lastName) {
+    const say = `Bello ${firstName} ${lastName}`;
+    return say;
+  }
+  
+  const result = sayBello("Annur", "Musthofa");
+  document.writeln(`<p>${result}</p>`)
+  
+  function getFinalValue(value){
+    if(value > 90){
+      return "A";
+    } else if(value > 80){
+      return "B";
+    } else if (value > 70){
+      return "C";
+    } else if(value > 60){
+      return "D";
+    } else {
+      return "E";
+    }
+  }
+  
+  const finalValue = getFinalValue(45);
+  document.writeln(`<p>${finalValue}</p>`);
+  
+  function isContains(array, searchValue){
+    for(const element of array) {
+      console.info(`Iterasi element ${element}`);
+      if(element === searchValue){
+        return true;
+      }
+    } 
+    return false;
+  }
+  const array = [12, 23, 34, 45, 56, 67, 23, 67, 90]
+  const search = 67;
+  const found = isContains(array, search)
+  document.writeln(`<p>${found}</p>`)
+  </script>
+</body>
+</html>
