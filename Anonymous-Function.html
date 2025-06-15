@@ -16,6 +16,16 @@
     say("asep");
     say("udin");
     
+    //Anonymus function di parameter
+    function giveMeName(callback){
+      callback("Chiko");
+    }
+    
+    giveMeName(say);
+    giveMeName(function(name){
+      document.writeln(`<p>Hi ${name}</p>`)
+    })
+    
   </script>
 </body>
 </html>

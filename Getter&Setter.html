@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Getter & Setter</title>
+</head>
+<body>
+  <script type="text/javascript" charset="utf-8">
+    
+    //getter
+    const person = {
+      fisrtName: "Annur",
+      lastName: "Musthofa",
+      get fullName(){
+        return `${this.fisrtName} ${this.lastName}`;
+      },
+      set fullName(value){
+        const array = value.split(" ");
+        this.fisrtName = array[0];
+        this.lastName = array[1];
+      }
+    };
+    
+    person.fullName = "Chiko Takahashi";
+    console.table(person);
+    
+    person.fullName = "Annur Musthofa";
+    console.table(person);
+    
+    person.fullName = "Shima Rin";
+    console.table(person);
+    
+  </script>
+</body>
+</html>

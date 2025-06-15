@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arrow function</title>
+</head>
+<body>
+  <script type="text/javascript" charset="utf-8">
+    
+   // const sayBello = (name) => {
+   //   const say = `Bello ${name}`;
+    //  console.info(say);
+    //}
+    
+    //const sayBello = (name) => console.info(`Hello ${name}`);
+    
+    //sayBello("Cihuyy");
+    
+    const sum = (first, second) => first + second;
+    
+    console.info(sum(100, 100));
+    
+    const sayBello = name => console.info(`Bello ${name}`);
+    
+    sayBello("Chiko");
+    
+    function giveMeName(callback){
+      callback("Annur");
+    }
+    
+    //Anonymous-Function
+   // giveMeName(function (name){
+    //  console.info(`Bello ${name}`);
+  //  })
+  
+  //arrow Function
+  giveMeName(name => console.info(`Bello ${name}`));
+    
+  </script>
+</body>
+</html>

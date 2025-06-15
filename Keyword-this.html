@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Keyword this</title>
+</head>
+<body>
+  <script type="text/javascript" charset="utf-8">
+    
+    console.info(this)//window
+    
+    function sample(){
+      console.info(this);
+      
+      function inner(){
+        console.info(this);
+      }
+      
+      inner();
+    }
+    
+    sample();
+    
+    const person = {
+      name: "Annur",
+      sayBello: function (value) {
+        console.info(`Bello ${value} My name is ${this.name}`);
+      }
+    }
+    
+    person.sayBello("Chikochi");
+    
+  </script>
+</body>
+</html>

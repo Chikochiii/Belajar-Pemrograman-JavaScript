@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Debugger</title>
+</head>
+<body>
+  <script type="text/javascript" charset="utf-8">
+    
+    function createFullName(firstName, middleName, lastName){
+      debugger;
+      const fullName = `${firstName} ${lastName} ${lastName}`;
+      return fullName;
+    }
+    
+    const name = createFullName("Chiko", "Annur", "Musthofa");
+    console.info(name);
+    
+  </script>
+</body>
+</html>

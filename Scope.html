@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Scope</title>
+</head>
+<body>
+  <script type="text/javascript" charset="utf-8">
+    //Global scope
+    let counter= 0;
+  function hitme(){
+    //local scope hitme
+    counter++;
+  }
+  
+    //Global scope
+  function other(){
+    //local scope other
+    
+  }
+  
+  hitme();
+  hitme();
+  
+  console.info(counter)
+  
+  function first(){
+    //local scope firts
+    let firstVariable = "first";
+    console.info(firstVariable)//error
+  }
+  function second(){
+    //local scope second
+    let secondVariable = "second";
+  }
+  
+  first();
+  second();
+  console.info(firstVariable);//error
+  console.info(secondVariable);//error
+    
+  </script>
+</body>
+</html>

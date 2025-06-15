@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Object Method arrow function</title>
+</head>
+<body>
+  <script type="text/javascript" charset="utf-8">
+    
+    const person = {
+      name: "Chiko",
+      sayBello: (name) => {
+        console.info(this);//window bukan person
+        console.info(`Bello ${name}`);
+        console.info(`Bello ${name}, My name is ${this.name}`);
+      }
+    };
+    
+    person.sayBello("Chiko");
+    
+  </script>
+</body>
+</html>

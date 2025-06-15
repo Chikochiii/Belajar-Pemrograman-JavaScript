@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Destructuring</title>
+</head>
+<body>
+  <script type="text/javascript" charset="utf-8">
+    //manual
+    //const names = ["Annur", "Musthofa", "Chiko"];
+    //const firstName = names[0];
+    //const middleName = names[1]
+    //const lastName = names[2];
+    
+    //console.info(firstName);
+    //console.info(middleName);
+    //console.info(lastName);
+    
+    //Destructuring
+    {
+          const names = ["Annur", "Musthofa", "Chiko", "Budi", "Asep"];
+    let [firstName, middleName, lastName, ...others] = names;
+    
+    console.info(firstName);
+    console.info(middleName);
+    console.info(lastName);
+    console.info(others);
+    }
+    
+    {
+      const person = {
+      firstName: "Annur",
+      lastName: "Musthofa",
+      addres: {
+        street: "Jl.in aja",
+        city: "Aminah",
+        country: "Kenapa aku WNI"
+      },
+      hobby: "Game",
+      channel: "Chikochi"
+    };
+    
+    let {firstName, lastName, addres: {street, city, country}, ...others} = person;
+    console.info(firstName);
+    console.info(lastName);
+    console.info(street);
+    console.info(city);
+    console.info(country);
+    console.info(others);
+    }
+    
+    {
+      function displayPerson({firstName, middleName, lastName}){
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+      
+      const person = {
+        firstName: "Annur",
+        middleName: "Chiko",
+        lastName: "Musthofa"
+      };
+      
+      displayPerson(person);
+    }
+    
+    {
+      function sum([first, second]) {
+        return first + second;
+      }
+      
+      console.info(sum([1, 2]))
+      console.info(sum([10, 20]))
+    }
+    
+    {
+      const names = ["Annur", "Musthofa"];
+      const [firstName, middleName, lastName = "Chiko"] = names;
+      
+      console.info(firstName);
+      console.info(middleName);
+      console.info(lastName);
+    }
+    {
+      const person = {
+      firstName: "Annur",
+      middleName: "Hitam",
+      lastName: "Musthofa"
+    };
+    
+    let {firstName, middleName = "Asep", lastName} = person;
+    console.info(firstName);
+    console.info(middleName);
+    console.info(lastName);
+    }
+    
+    {
+      const person = {
+      firstName: "Annur",
+      middleName: "Hitam",
+      lastName: "Musthofa"
+    };
+    let {firstName: namaDepan,
+    middleName: namaTengah = "Asep",
+    lastName: namaBelakang} = person;
+    console.info(namaDepan);
+    console.info(namaTengah);
+    console.info(namaBelakang);
+    }
+    
+  </script>
+</body>
+</html>
